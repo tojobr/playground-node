@@ -1,0 +1,11 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "this is my node playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test\" && exit 1"
+  },
+  "author": "tojobr",
+  "license": "ISC"
+}
