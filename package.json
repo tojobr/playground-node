@@ -7,5 +7,8 @@
     "test": "echo \"Test\" && exit 1"
   },
   "author": "tojobr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
 }
