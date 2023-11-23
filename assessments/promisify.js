@@ -1,3 +1,8 @@
+/**
+ * promisify a function with any argument
+ * @param {function} callbackFunction 
+ * @returns {Promise}
+ */
 function promisify(callbackFunction) {
 	return (...args) => {
 		return new Promise((resolve) => {
@@ -24,6 +29,10 @@ function callbackBasedArgument(num, callback) {
 	}, 100);
 }
 
+/**
+ * function test without argument 
+ * @returns {string | null}
+ */
 async function testWithoutArgument() {
 	const promisedBased = promisify(callbackBased);
 	const functionType = promisedBased.constructor.name;
@@ -42,6 +51,11 @@ async function testWithoutArgument() {
 	return result;
 }
 
+/**
+ * function test with argument
+ * @param {number} num 
+ * @returns {number}
+ */
 async function testWithArgument(num) {
 	const promisedBased = promisify(callbackBasedArgument);
 	const result = await promisedBased(num);
